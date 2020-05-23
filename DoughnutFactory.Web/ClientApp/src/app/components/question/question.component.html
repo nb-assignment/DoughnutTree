@@ -1,0 +1,22 @@
+<h1>{{treeNode?.question}}</h1>
+
+<div class="btns-container" *ngIf="!showResult">
+  <app-button [buttonConfig]="yesBtnConfig"
+              (textBtnClickEmt)="yesButtonClicked($event)"></app-button>
+  <app-button [buttonConfig]="noBtnConfig"
+              (textBtnClickEmt)="noButtonClicked($event)"></app-button>
+</div>
+
+<div class="btns-container" *ngIf="showResult">
+  <app-button [buttonConfig]="showResultsBtnConfig"
+              (textBtnClickEmt)="showResultsButtonClicked($event)"></app-button>
+</div>
+
+<div class="btns-container">
+  <app-button [buttonConfig]="playAgainBtnConfig"
+              (textBtnClickEmt)="playAgainButtonClicked($event)"></app-button>
+</div>
+
+<div *ngIf="buildTree">
+  <app-doughnut-tree></app-doughnut-tree>
+</div>

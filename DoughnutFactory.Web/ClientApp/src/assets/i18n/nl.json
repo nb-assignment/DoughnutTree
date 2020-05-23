@@ -1,0 +1,10 @@
+{
+    "nav-menu-component": {
+        "title": "SmartLockr Portaal"
+    },
+    "home-component": {
+        "title": "Vertaald met i18n",
+        "welcome" : "Welkom in deze geweldige app!",
+        "current-date" : "De huidige datum is: {{value}}"
+     }
+}

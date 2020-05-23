@@ -1,0 +1,11 @@
+<ng-container *ngTemplateOutlet="text">
+</ng-container>
+
+<!-- Text Button -->
+<ng-template #text>
+  <button type="button"
+          [ngStyle]="buttonConfig.styles"
+          (click)="onTextBtnClick()" title="Do you want doughnut?">
+    {{ buttonConfig.text}}
+  </button>
+</ng-template>

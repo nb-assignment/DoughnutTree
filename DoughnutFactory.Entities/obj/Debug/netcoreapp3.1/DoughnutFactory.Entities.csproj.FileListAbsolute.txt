@@ -1,0 +1,8 @@
+C:\Users\NeelBhatt\source\repos\DoughnutFactor\DoughnutFactory.Entities\bin\Debug\netcoreapp3.1\DoughnutFactory.Entities.deps.json
+C:\Users\NeelBhatt\source\repos\DoughnutFactor\DoughnutFactory.Entities\bin\Debug\netcoreapp3.1\DoughnutFactory.Entities.dll
+C:\Users\NeelBhatt\source\repos\DoughnutFactor\DoughnutFactory.Entities\bin\Debug\netcoreapp3.1\DoughnutFactory.Entities.pdb
+C:\Users\NeelBhatt\source\repos\DoughnutFactor\DoughnutFactory.Entities\obj\Debug\netcoreapp3.1\DoughnutFactory.Entities.csprojAssemblyReference.cache
+C:\Users\NeelBhatt\source\repos\DoughnutFactor\DoughnutFactory.Entities\obj\Debug\netcoreapp3.1\DoughnutFactory.Entities.AssemblyInfoInputs.cache
+C:\Users\NeelBhatt\source\repos\DoughnutFactor\DoughnutFactory.Entities\obj\Debug\netcoreapp3.1\DoughnutFactory.Entities.AssemblyInfo.cs
+C:\Users\NeelBhatt\source\repos\DoughnutFactor\DoughnutFactory.Entities\obj\Debug\netcoreapp3.1\DoughnutFactory.Entities.dll
+C:\Users\NeelBhatt\source\repos\DoughnutFactor\DoughnutFactory.Entities\obj\Debug\netcoreapp3.1\DoughnutFactory.Entities.pdb
