@@ -3,8 +3,6 @@
 __Overall Goal__
 - 
 
-![Image description](https://github.com/nb-assignment/funda-assignment/blob/master/Funda.Frontend/wwwroot/Images/funda.PNG)
-
 # Architecture explanation
 
 `DoughnutFactory` solution contains below projects:
