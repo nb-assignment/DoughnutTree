@@ -6,6 +6,14 @@ __Overall Goal__
 
 ![](https://github.com/nb-assignment/DoughnutTree/blob/master/DoughnutFactory.Web/ClientApp/src/assets/lobster-1.PNG)
 
+- Once the user reaches end of the game, show option to show results
+
+![](https://github.com/nb-assignment/DoughnutTree/blob/master/DoughnutFactory.Web/ClientApp/src/assets/lobster-3.PNG)
+
+- Show user's choice in a decision tree diagram by highlighting the choices
+
+![](https://github.com/nb-assignment/DoughnutTree/blob/master/DoughnutFactory.Web/ClientApp/src/assets/lobster-4.PNG)
+
 # Architecture explanation
 
 `DoughnutFactory` solution contains below projects:
