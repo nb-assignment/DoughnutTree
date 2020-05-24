@@ -223,3 +223,5 @@ C:\Users\NeelBhatt\source\repos\DoughnutFactor\DoughnutFactory.Tests\bin\Debug\n
 C:\Users\NeelBhatt\source\repos\DoughnutFactor\DoughnutFactory.Tests\bin\Debug\netcoreapp3.1\DoughnutFactory.Entities.pdb
 C:\Users\NeelBhatt\source\repos\DoughnutFactor\DoughnutFactory.Tests\bin\Debug\netcoreapp3.1\Castle.Core.dll
 C:\Users\NeelBhatt\source\repos\DoughnutFactor\DoughnutFactory.Tests\bin\Debug\netcoreapp3.1\Moq.dll
+C:\Users\NeelBhatt\source\repos\DoughnutFactor\DoughnutFactory.Tests\bin\Debug\netcoreapp3.1\NWebsec.AspNetCore.Core.dll
+C:\Users\NeelBhatt\source\repos\DoughnutFactor\DoughnutFactory.Tests\bin\Debug\netcoreapp3.1\NWebsec.AspNetCore.Middleware.dll

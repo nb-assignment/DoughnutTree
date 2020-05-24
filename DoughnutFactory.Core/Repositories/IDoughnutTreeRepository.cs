@@ -1,13 +1,12 @@
 ﻿using DoughnutFactory.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DoughnutFactory.Core.Repositories
 {
+    /// <summary>
+    /// Interface to extend basic repository methods
+    /// </summary>
     public interface IDoughnutTreeRepository : IRepository<DoughnutTreeNode>
     {
-        Task<IEnumerable<DoughnutTreeNode>> GetDoughnutTreeAsync();
+       
     }
 }

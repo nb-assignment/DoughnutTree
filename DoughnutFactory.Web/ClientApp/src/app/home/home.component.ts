@@ -3,8 +3,6 @@ import { AppService } from '../../_services/app.service';
 import { DoughnutTreeNode } from '../../_models/DoughnutTreeNode';
 import { DoughnutTree } from '../../_models/DoughnutTree';
 
-declare var $: any;
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

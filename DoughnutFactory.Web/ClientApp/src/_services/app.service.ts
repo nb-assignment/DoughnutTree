@@ -10,14 +10,7 @@ import { DoughnutTreeNode } from '../_models/DoughnutTreeNode';
 })
 
 export class AppService {
-  headers: any;
   constructor(private httpClient: HttpClient) {
-    this.headers = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      })
-    }
   }
 
   getDoughnutTree(): Observable<DoughnutTree>{
@@ -33,20 +26,5 @@ export class AppService {
   getNodeById(id): Observable<DoughnutTreeNode> {
     var endpoint = environment.endpoint + "/doughnuttreenode/" + id;
     return this.httpClient.get<DoughnutTreeNode>(endpoint);
-  }
-
-  updateChoiceService(obj: any) {
-    var endpoint = environment.endpoint + "helper/updatechoice";
-    return this.httpClient.post(endpoint, obj, this.headers);
-  }
-
-  getChoiceService() {
-    var endpoint = environment.endpoint + "helper/getchoice";
-    return this.httpClient.get(endpoint, this.headers);
-  }
-
-  clearDatabaseChoiceService() {
-    var endpoint = environment.endpoint + "helper/clearchoice";
-    return this.httpClient.get(endpoint, this.headers);
   }
 }

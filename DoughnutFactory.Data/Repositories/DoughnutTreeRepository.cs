@@ -7,37 +7,66 @@ using System.Threading.Tasks;
 
 namespace DoughnutFactory.Data.Repositories
 {
+    /// <summary>
+    /// Tree repository
+    /// </summary>
     public class DoughnutTreeRepository : Repository<DoughnutTree>, IDoughnutTreeRepository
     {
+        /// <summary>
+        /// Constructore
+        /// </summary>
+        /// <param name="context"></param>
         public DoughnutTreeRepository(ApplicationDbContext context)
             : base(context)
         { }
 
-        public async Task<IEnumerable<DoughnutTreeNode>> GetDoughnutTreeAsync()
+        /// <summary>
+        /// Get all tree nodes
+        /// </summary>
+        /// <returns></returns>
+        public async Task<IEnumerable<DoughnutTreeNode>> GetAllAsync()
         {
             return await ApplicationDbContext.DoughnutTreeNodes.ToListAsync();
         }
 
+        /// <summary>
+        /// Get tree nodes by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         async ValueTask<DoughnutTreeNode> IRepository<DoughnutTreeNode>.GetByIdAsync(int id)
         {
             return await ApplicationDbContext.DoughnutTreeNodes.FindAsync(id);
         }
 
-        public Task AddAsync(DoughnutTreeNode entity)
+        /// <summary>
+        /// Add a tree node
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        public async Task AddAsync(DoughnutTreeNode entity)
         {
-            throw new NotImplementedException();
+            await ApplicationDbContext.DoughnutTreeNodes.AddAsync(entity);
+
+            await ApplicationDbContext.SaveChangesAsync();
+
+            return;
         }
 
-        public void Remove(DoughnutTreeNode entity)
+        /// <summary>
+        /// Remove a tree node
+        /// </summary>
+        /// <param name="entity"></param>
+        public async void Remove(DoughnutTreeNode entity)
         {
-            throw new NotImplementedException();
+            ApplicationDbContext.DoughnutTreeNodes.Remove(entity);
+
+            await ApplicationDbContext.SaveChangesAsync();
         }
 
-        Task<IEnumerable<DoughnutTreeNode>> IRepository<DoughnutTreeNode>.GetAllAsync()
-        {
-            throw new NotImplementedException();
-        }
-
+        /// <summary>
+        /// Db ocntext
+        /// </summary>
         private ApplicationDbContext ApplicationDbContext
         {
             get { return Context as ApplicationDbContext; }

@@ -27,7 +27,7 @@ namespace DoughnutFactory.Tests.ControllerTests
         public void GetTree_Not_Null()
         {
             //Arrange
-            _doughnutTreeService.Setup(repo => repo.GetAll()).ReturnsAsync(TreeNodeMockData.GetTree());
+            _doughnutTreeService.Setup(repo => repo.GetTree()).ReturnsAsync(TreeNodeMockData.GetTree());
 
             //Act
             var result = _doughnutTreeNodeController.GetTree();
@@ -40,21 +40,21 @@ namespace DoughnutFactory.Tests.ControllerTests
         public void GetTree_Returns_Null()
         {
             //Arrange
-            _doughnutTreeService.Setup(repo => repo.GetAll()).ReturnsAsync((DoughnutTree)null);
+            _doughnutTreeService.Setup(repo => repo.GetTree()).ReturnsAsync((DoughnutTree)null);
 
             //Act
             var result = _doughnutTreeNodeController.GetTree();
 
             //Assert        
-            var okObjectResult = Assert.IsType<OkObjectResult>(result.Result);
-            Assert.Null(okObjectResult.Value);
+            var notFoundObjectResult = Assert.IsType<NotFoundObjectResult>(result.Result);
+            Assert.Equal("Tree not found", notFoundObjectResult.Value);
         }
 
         [Fact]
         public void GetTree_ReturnsOk_Return_Type()
         {
             //Arrange
-            _doughnutTreeService.Setup(repo => repo.GetAll()).ReturnsAsync(TreeNodeMockData.GetTree());
+            _doughnutTreeService.Setup(repo => repo.GetTree()).ReturnsAsync(TreeNodeMockData.GetTree());
 
             //Act
             var result = _doughnutTreeNodeController.GetTree();
@@ -67,7 +67,7 @@ namespace DoughnutFactory.Tests.ControllerTests
         public void GetTree_ReturnsOk_Response_Check()
         {
             //Arrange
-            _doughnutTreeService.Setup(repo => repo.GetAll()).ReturnsAsync(TreeNodeMockData.GetTree());
+            _doughnutTreeService.Setup(repo => repo.GetTree()).ReturnsAsync(TreeNodeMockData.GetTree());
 
             //Act
             var result = _doughnutTreeNodeController.GetTree();
@@ -102,8 +102,8 @@ namespace DoughnutFactory.Tests.ControllerTests
             var result = _doughnutTreeNodeController.GetFirstNode();
 
             //Assert        
-            var okObjectResult = Assert.IsType<OkObjectResult>(result.Result);
-            Assert.Null(okObjectResult.Value);
+            var notFoundObjectResult = Assert.IsType<NotFoundObjectResult>(result.Result);
+            Assert.Equal("Tree node not found", notFoundObjectResult.Value);
         }
 
         [Fact]
@@ -158,8 +158,8 @@ namespace DoughnutFactory.Tests.ControllerTests
             var result = _doughnutTreeNodeController.GetNodeById(1);
 
             //Assert        
-            var okObjectResult = Assert.IsType<OkObjectResult>(result.Result);
-            Assert.Null(okObjectResult.Value);
+            var notFoundObjectResult = Assert.IsType<NotFoundObjectResult>(result.Result);
+            Assert.Equal("Tree node not found", notFoundObjectResult.Value);
         }
 
         [Fact]

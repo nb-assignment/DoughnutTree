@@ -2,13 +2,28 @@
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
+/// <summary>
+/// Db context
+/// </summary>
 public class ApplicationDbContext : DbContext
 {
+    /// <summary>
+    /// Tree nodes
+    /// </summary>
     public DbSet<DoughnutTreeNode> DoughnutTreeNodes { get; set; }
+
+    /// <summary>
+    /// Ctor
+    /// </summary>
+    /// <param name="options"></param>
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
     { }
 
+    /// <summary>
+    /// Model creating
+    /// </summary>
+    /// <param name="modelBuilder"></param>
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<DoughnutTreeNode>()
@@ -22,11 +37,15 @@ public class ApplicationDbContext : DbContext
             .HasForeignKey(x => x.NegativeNodeId);
     }
 
+    /// <summary>
+    /// Seed the default tree nodes
+    /// </summary>
     public void EnsureSeeded()
     {
         //Make sure that DB exists and has latest schema
         Database.Migrate();
 
+        // If tree nodes are not available, add them
         if (!DoughnutTreeNodes.Any())
         {
             DoughnutTreeNodes.AddRange(

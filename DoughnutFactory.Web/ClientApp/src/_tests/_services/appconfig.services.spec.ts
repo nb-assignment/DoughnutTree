@@ -3,7 +3,6 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { AppConfigService } from '../../_services/appconfig.service';
 
 describe('AppConfigService', () => {
-  let appConfigService: AppConfigService;
   let httpMock: HttpTestingController;
 
   beforeEach(() => {
@@ -16,7 +15,6 @@ describe('AppConfigService', () => {
       ],
     });
 
-    appConfigService = TestBed.get(AppConfigService);
     httpMock = TestBed.get(HttpTestingController);
   });
 

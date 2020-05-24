@@ -1,8 +1,8 @@
 import { TestBed, inject } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { LoggerService } from 'src/app/_services/logger.service';
-import { AppConfigService } from 'src/app/_services/appconfig.service';
 import { RouterTestingModule } from '@angular/router/testing';
+import { LoggerService } from '../../_services/logger.service';
+import { AppConfigService } from '../../_services/appconfig.service';
 
 describe("Logger", () => {
 
@@ -53,29 +53,6 @@ describe("Logger", () => {
     service.loadLogger(instrumentationKey);
     loggerServiceSpy = spyOn(service.appInsights, 'trackException').and.callThrough();
     service.logError(error)
-    expect(loggerServiceSpy).toHaveBeenCalled();
-  }));
-
-  it('Should log page view and spy on trackPageView', inject([LoggerService], (service: LoggerService) => {
-    service.loadLogger(instrumentationKey);
-    loggerServiceSpy = spyOn(service.appInsights, "trackPageView").and.callThrough();
-    service.logPageView("Upload", "/upload");
-    expect(loggerServiceSpy).toHaveBeenCalled();
-  }));
-
-  it('Should log customEvent with object and spy on trackEvent', inject([LoggerService], (service: LoggerService) => {
-    service.loadLogger(instrumentationKey);
-    let properties: any = new Object("12345");
-    loggerServiceSpy = spyOn(service.appInsights, "trackEvent").and.callThrough();
-    service.logCustomEvent("Upload", properties);
-    expect(loggerServiceSpy).toHaveBeenCalled();
-  }));
-
-  it('Should log customEvent without object and spy on trackEvent ', inject([LoggerService], (service: LoggerService) => {
-    service.loadLogger(instrumentationKey);
-    let properties: any = null;
-    loggerServiceSpy = spyOn(service.appInsights, "trackEvent").and.callThrough();
-    service.logCustomEvent("Upload", properties);
     expect(loggerServiceSpy).toHaveBeenCalled();
   }));
 

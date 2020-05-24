@@ -141,5 +141,7 @@ C:\Users\NeelBhatt\source\repos\DoughnutFactor\DoughnutFactory.Api\bin\Debug\net
 C:\Users\NeelBhatt\source\repos\DoughnutFactor\DoughnutFactory.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\NeelBhatt\source\repos\DoughnutFactor\DoughnutFactory.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\NeelBhatt\source\repos\DoughnutFactor\DoughnutFactory.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\NeelBhatt\source\repos\DoughnutFactor\DoughnutFactory.Api\bin\Debug\netcoreapp3.1\NWebsec.AspNetCore.Core.dll
+C:\Users\NeelBhatt\source\repos\DoughnutFactor\DoughnutFactory.Api\bin\Debug\netcoreapp3.1\NWebsec.AspNetCore.Middleware.dll
 C:\Users\NeelBhatt\source\repos\DoughnutFactor\DoughnutFactory.Api\obj\Debug\netcoreapp3.1\DoughnutFactory.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\NeelBhatt\source\repos\DoughnutFactor\DoughnutFactory.Api\obj\Debug\netcoreapp3.1\DoughnutFactory.Api.MvcApplicationPartsAssemblyInfo.cache

@@ -89,7 +89,7 @@ namespace DoughnutFactory.Tests.ServiceTests
             _unitOfWork.Setup(repo => repo.DoughnutTreeRepository.GetByIdAsync(It.IsAny<int>()))
              .Returns(() => new ValueTask<DoughnutTreeNode>(TreeNodeMockData.GetTreeNode()));
 
-            _unitOfWork.Setup(repo => repo.DoughnutTreeRepository.GetDoughnutTreeAsync())
+            _unitOfWork.Setup(repo => repo.DoughnutTreeRepository.GetAllAsync())
             .Returns(Task.FromResult(TreeNodeMockData.GetTreeNodes()));
 
             //Act
@@ -120,7 +120,7 @@ namespace DoughnutFactory.Tests.ServiceTests
             _unitOfWork.Setup(repo => repo.DoughnutTreeRepository.GetByIdAsync(It.IsAny<int>()))
              .Returns(() => new ValueTask<DoughnutTreeNode>(TreeNodeMockData.GetTreeNode()));
 
-            _unitOfWork.Setup(repo => repo.DoughnutTreeRepository.GetDoughnutTreeAsync())
+            _unitOfWork.Setup(repo => repo.DoughnutTreeRepository.GetAllAsync())
             .Returns(Task.FromResult(TreeNodeMockData.GetTreeNodes()));
 
             //Act
@@ -137,7 +137,7 @@ namespace DoughnutFactory.Tests.ServiceTests
             _unitOfWork.Setup(repo => repo.DoughnutTreeRepository.GetByIdAsync(It.IsAny<int>()))
              .Returns(() => new ValueTask<DoughnutTreeNode>(TreeNodeMockData.GetTreeNode()));
 
-            _unitOfWork.Setup(repo => repo.DoughnutTreeRepository.GetDoughnutTreeAsync())
+            _unitOfWork.Setup(repo => repo.DoughnutTreeRepository.GetAllAsync())
             .Returns(Task.FromResult(TreeNodeMockData.GetTreeNodes()));
 
             //Act
