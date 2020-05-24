@@ -46,18 +46,18 @@ Run below command to build the each project from the root folder.
 
 `dotnet build`
 
+## Run Application
+
+Set `DoughnutFactory.Web` and `DoughnutFactory.Api` as the startup project and click on `Start`
+
+![](https://github.com/nb-assignment/DoughnutTree/blob/master/DoughnutFactory.Web/ClientApp/src/assets/lobster-5.PNG)
+
 ## Database creation
 
 - The database would be created once you build & run the application along with some default seed data.
 - If the database is not created, make sure the connection string which resides in the appsettings.json under the `Api` project matches with your requirement and still it does not create the run update database command from `Data` project:
 
 `dotnet ef database update -s ../DoughnutFactory.Api -c ApplicationDbContext`
-
-## Run Application
-
-Set `DoughnutFactory.Web` and `DoughnutFactory.Api` as the startup project and click on `Start`
-
-![](https://github.com/nb-assignment/DoughnutTree/blob/master/DoughnutFactory.Web/ClientApp/src/assets/lobster-5.PNG)
 
 # Architecture explanation
 
