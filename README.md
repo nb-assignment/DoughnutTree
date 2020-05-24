@@ -46,9 +46,18 @@ Run below command to build the each project from the root folder.
 
 `dotnet build`
 
+## Database creation
+
+- The database would be created once you build & run the application along with some default seed data.
+- If the database is not created, make sure the connection string which resides in the appsettings.json under the `Api` project matches with your requirement and still it does not create the run update database command from `Data` project:
+
+`dotnet ef database update -s ../DoughnutFactory.Api -c ApplicationDbContext`
+
 ## Run Application
 
-Set `DoughnutFactory.Web` and `DoughnutFactory.Api` as the startup project and run on IIS Express
+Set `DoughnutFactory.Web` and `DoughnutFactory.Api` as the startup project and click on `Start`
+
+![](https://github.com/nb-assignment/DoughnutTree/blob/master/DoughnutFactory.Web/ClientApp/src/assets/lobster-5.PNG)
 
 # Architecture explanation
 
@@ -141,7 +150,7 @@ You may use Test -> Test explorer to run the unit tests or run below command fro
 
 ## Yml file for CI\CD
 
-There is a `.yml` file present under the folder of the project `DoughnutFactory.Web`
+There is a `.yml` file present under the root folder of the solution
 
 It contains some basic steps like
 
