@@ -1,7 +1,10 @@
 # About this project
 
 __Overall Goal__
-- 
+
+- A simple web application which allows a player to choose their own path by picking between two simple choices displayed on their screen in order to progress to the next set of choices, until they get to one of the endings
+
+![](https://github.com/nb-assignment/DoughnutTree/blob/master/DoughnutFactory.Web/ClientApp/src/assets/lobster-1.PNG)
 
 # Architecture explanation
 
@@ -39,7 +42,7 @@ __API & backend logic__
 - I tried to use different design patterns to achieve single responsibility, add extensions instead of long methods, dependency injection, properly using interfaces wherever needed, repository pattern etc
 
 __UI in Angular__
-- 
+
 - Parallelly I started with the UI in Angular by adding small components like buttons, questions, tree etc and called them on basis of conditions from main home component
 - Consumed the API to get the tree nodes to show questions
 - Used orgchart npm package to show the data as a tree
