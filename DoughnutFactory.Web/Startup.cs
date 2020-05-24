@@ -43,10 +43,23 @@ namespace DoughnutFactory.Web
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            // To add HTTP header X-Content-Type-Options
+            app.UseXContentTypeOptions();
+
+            // To add HTTP header X-Frame-Options, allowing sameorigin to allow iframe used for refresh tokens
+            app.UseXfo(o => o.SameOrigin());
+
+            // To add HTTP header X-XSS-Protection, enable protection with block mode
+            app.UseXXssProtection(options => options.EnabledWithBlockMode());
+
+            // To add HTTP header Referrer-Policy, instructing the browser to not send referrer
+            app.UseReferrerPolicy(opts => opts.NoReferrer());
+
+            // Use cors
             app.UseCors();
 
-            //app.UseHttpsRedirection();
             app.UseStaticFiles();
+
             if (!env.IsDevelopment())
             {
                 app.UseSpaStaticFiles();
