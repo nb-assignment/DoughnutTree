@@ -141,7 +141,7 @@ You may use Test -> Test explorer to run the unit tests or run below command fro
 
 ## Yml file for CI\CD
 
-There is a `.yml` file present under the folder of the project `Funda.Frontend`
+There is a `.yml` file present under the folder of the project `DoughnutFactory.Web`
 
 It contains some basic steps like
 
