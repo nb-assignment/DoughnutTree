@@ -115,6 +115,7 @@ __Unit Tests__
 
 - I added test cases for the controller to make sure correct items are returned, mocked the service responses
 - I added test cases for main business logic to make sure it returns correct tree from tree nodes
+- I added test cases within Angular project for services
 
 __Security__
 
@@ -147,6 +148,10 @@ __Areas to improve:__
 You may use Test -> Test explorer to run the unit tests or run below command from the project `DoughnutFactory.Tests`
 
 `dotnet test`
+
+For Angular tests, run below command from ClientApp folder of the project `DoughnutFactory.Web`
+
+`ng test`
 
 ## Yml file for CI\CD
 
