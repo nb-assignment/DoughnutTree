@@ -1,0 +1,63 @@
+﻿# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+name: $(date:MMddyy)$(rev:.r)
+
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  buildConfiguration: 'Release'  
+  system.debug: 'false'   
+  solution: '$(build.SourcesDirectory)'
+  
+steps:
+- task: NuGetToolInstaller@0
+  displayName: 'Use NuGet 5.x'
+  inputs:
+    versionSpec: 5.x
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'restore'
+    feedsToUse: 'select'
+    projects: '**/*.sln'
+
+- task: NuGetCommand@2
+  displayName: "Restore Nuget Packages"
+  inputs:
+    command: 'restore'
+    feedsToUse: 'select'
+    includeNuGetOrg: true
+    restoreSolution: '**/*.sln'
+
+- task: VSBuild@1
+  displayName: 'Build Solution'
+  inputs:    
+    solution: '**/*.sln'
+    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)" /p:Platform="Any CPU"'
+    configuration: '$(buildConfiguration)'
+
+- task: PublishSymbols@2
+  displayName: 'Publish symbols path'
+  inputs:
+    SearchPattern: '**\bin\**\*.pdb'
+    PublishSymbols: false
+  continueOnError: true
+
+- task: CopyFiles@2
+  displayName: Copy files
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)'
+    Contents: 'Deployment\*.json'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+#Your build pipeline references an undefined variable named ‘Parameters.ArtifactName’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact'
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+    ArtifactName: '$(Parameters.ArtifactName)'
