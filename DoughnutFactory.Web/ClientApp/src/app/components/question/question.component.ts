@@ -27,7 +27,8 @@ export class QuestionComponent implements OnInit {
       fontSize: '20px',
       borderRadius: '10px',
       marginTop: '30px',
-      curson: 'pointer'
+      curson: 'pointer',
+      marginLeft: '5px'
     },
     text: 'Yes'
   };
@@ -43,7 +44,8 @@ export class QuestionComponent implements OnInit {
       fontSize: '20px',
       borderRadius: '10px',
       marginTop: '30px',
-      curson: 'pointer'
+      curson: 'pointer',
+      marginLeft: '5px'
     },
     text: 'No'
   };
