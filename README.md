@@ -14,6 +14,42 @@ __Overall Goal__
 
 ![](https://github.com/nb-assignment/DoughnutTree/blob/master/DoughnutFactory.Web/ClientApp/src/assets/lobster-4.PNG)
 
+# .Net Core version
+
+.Net Core 3.1
+
+# Angular version
+
+Angular 8
+
+# IDE version
+
+Visual studio 2019
+
+## Nuget restore
+
+Open the solution in VS 2019 and restore the nuget from solution
+
+or
+
+Run below command to build the project from the root folder.
+
+`dotnet restore`
+
+## Build
+
+Open the solution in VS 2019 and build the project 
+
+or
+
+Run below command to build the each project from the root folder.
+
+`dotnet build`
+
+## Run Application
+
+Set `DoughnutFactory.Web` and `DoughnutFactory.Api` as the startup project and run on IIS Express
+
 # Architecture explanation
 
 `DoughnutFactory` solution contains below projects:
@@ -79,6 +115,12 @@ __CI\CD__
 
 - To make sure the app would be able to get integrated with the builds in the future, I added .yml file along with some basic steps to build the solution along with creating the artifacts.
 
+__Swagger__
+
+- I added swagger for better documentation of API end points
+
+![](https://github.com/nb-assignment/DoughnutTree/blob/master/DoughnutFactory.Web/ClientApp/src/assets/lobster-6.PNG)
+
 __Misc tasks__
 
 - In the end I added Lobster ink logo and some UI improvements. Also, did refactoring wherever needed
@@ -91,42 +133,6 @@ __Areas to improve:__
 
 - To write more test cases for UI and for ts classed in angular
 
-# .Net Core version
-
-.Net Core 3.1
-
-# Angular version
-
-Angular 8
-
-# IDE version
-
-Visual studio 2019
-
-## Nuget restore
-
-Open the solution in VS 2019 and restore the nuget from solution
-
-or
-
-Run below command to build the project from the root folder.
-
-`dotnet restore`
-
-## Build
-
-Open the solution in VS 2019 and build the project 
-
-or
-
-Run below command to build the each project from the root folder.
-
-`dotnet build`
-
-## Run Application
-
-Set `DoughnutFactory.Web` and `DoughnutFactory.Api` as the startup project and run on IIS Express
-
 ## Running unit tests
 
 You may use Test -> Test explorer to run the unit tests or run below command from the project `DoughnutFactory.Tests`
@@ -135,7 +141,7 @@ You may use Test -> Test explorer to run the unit tests or run below command fro
 
 ## Yml file for CI\CD
 
-There is a `.yml` file present under the folder of the project `Funda.Frontend`
+There is a `.yml` file present under the folder of the project `DoughnutFactory.Web`
 
 It contains some basic steps like
 
